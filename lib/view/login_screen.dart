@@ -1,120 +1,67 @@
 import 'package:flutter/material.dart';
-import 'package:rohy/shared/widget/custom_button.dart';
-import 'package:rohy/shared/widget/custom_textfield.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rohy/shared/colors/app_colors.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends StatelessWidget {
 
   const LoginScreen({super.key});
-
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
-
-  bool _showPassword = false;
-
-  void onTapShowPassword() {
-    setState(() {
-      _showPassword = !_showPassword;
-    });
-    print("Bonour");
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
         width: double.infinity,
-        decoration: const BoxDecoration(
-          color: Colors.white
+        height: double.infinity,
+        padding: EdgeInsets.symmetric(horizontal: 20.w,vertical: 10.h),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              AppColors.blueSecondary,
+              AppColors.blueThirdly,
+              AppColors.greenPrimary]
+          ),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            const Center(
-              child: Image(
-                image: AssetImage("lib/shared/assets/images/logo.jpg"),
-                height: 180,
-                fit: BoxFit.cover,
-              ),
-            ),
-            const Text(
-              "Login",
-              style: TextStyle(
-                fontSize: 25,
-                color: Colors.green,
-                fontWeight: FontWeight.w600
-              ),
-            ),
-            _buildForm()
-          ],
+        child: SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      'VOUS N\'AVEZ PAS UN COMPTE?',
+                      style: TextStyle(
+                        color: AppColors.greenSecondary,
+                        fontSize: 12.sp
+                      ),
+                    ),
+                    const SizedBox(width: 10,),
+                    Text(
+                      'S\'INSCRIRE',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12.sp
+                      ),
+                    )
+                  ],
+                ),
+                SizedBox(height: 20.h,),
+                Positioned(
+                  left: -60.w,
+                  child: Transform.rotate(
+                    angle: -6.41,
+                    child: Image.asset(
+                      'assets/images/calendrier2.png',
+                      height: 206.h,
+                      width: 336.w,
+                    ),
+                  ),
+                )
+              ],
+            )
         ),
-      ),
-    );
-  }
-
-  Widget _buildForm() {
-    return Form(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const CustomTextField(
-            prefixIcon: Icons.alternate_email,
-            hintText: 'Email',
-          ),
-          const SizedBox(height: 15,),
-          CustomTextField(
-            prefixIcon: Icons.key,
-            hintText: 'Mot de passe',
-            textInputType: TextInputType.visiblePassword,
-            obscureText: !_showPassword,
-            onTapShowPassword: onTapShowPassword,
-          ),
-          Container(
-            alignment: Alignment.topRight,
-            child:TextButton(
-              onPressed: () => print('Mot de passe oublié?'),
-              child: Text('Mot de passe oublié?'),
-            ),
-          ),
-          const CustomButton(labelButton: Text('Login'),),
-          Row(
-            children: const [
-              Expanded(child: Divider()),
-              Text("Or"),
-              Expanded(child: Divider()),
-            ],
-          ),
-          CustomButton(
-              backgroundColor: Color.fromRGBO(0, 0, 0, 0.5),
-              labelButton: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const  [
-                  Icon(Icons.facebook),
-                  SizedBox(width: 20,),
-                  Text(
-                    'Login with google',
-                    style: TextStyle(color:Colors.blueGrey),
-                  )
-                ],
-              ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children:  [
-              const Text(
-                'New to logistics?'
-              ),
-              TextButton(
-                // TODO : Replace redirection in a register screen
-                onPressed: () => print('Register'),
-                child: const Text('Register'),
-              )
-            ],
-          )
-        ],
       ),
     );
   }
