@@ -25,7 +25,7 @@ class CustomTextField extends StatelessWidget{
       children: [
         Icon(
           prefixIcon,
-          size: 18,
+          size: 20,
         ),
         Expanded(
           child: TextField(
@@ -34,6 +34,7 @@ class CustomTextField extends StatelessWidget{
             decoration: InputDecoration(
               hintText: hintText,
               filled: true,
+              fillColor: Colors.transparent,
               suffixIcon: textInputType == TextInputType.visiblePassword
                 ? _buildSuffixIconPassword(obscureText,onTapShowPassword)
                 : null,
