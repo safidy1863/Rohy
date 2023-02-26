@@ -62,7 +62,7 @@ class RegisterViaEmail extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: 110.h,
+                top: 80.h,
                 left: -50.w,
                 child: Transform.rotate(
                   angle: 6.21,
@@ -75,7 +75,7 @@ class RegisterViaEmail extends StatelessWidget {
               ),
               Positioned(
                 right: -100.w,
-                top: 40.h,
+                top: 30.h,
                 child: Transform.rotate(
                   angle: 0.2,
                   child: Image.asset(
@@ -86,7 +86,7 @@ class RegisterViaEmail extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 274.h),
+                margin: EdgeInsets.only(top: 250.h),
                 padding: EdgeInsets.symmetric(horizontal: 34.w),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
