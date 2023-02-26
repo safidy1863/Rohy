@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rohy/shared/colors/app_colors.dart';
 
 class CustomButton extends StatelessWidget {
@@ -11,24 +12,21 @@ class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
     required this.labelButton,
-    this.height = 50,
+    this.height = 40,
     this.width = double.infinity,
     this.backgroundColor
   });
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-        width: double.infinity,
-        child: ElevatedButton(
-          // TODO : change Redirection in home page
-            onPressed: () => print("Login redirection"),
-            style: ElevatedButton.styleFrom(
-              fixedSize: Size(width, height),
-              backgroundColor: backgroundColor ?? AppColors.greenPrimary
-            ),
-            child:  labelButton
-        )
+    return ElevatedButton(
+      // TODO : change Redirection in home page
+        onPressed: () => print("Login redirection"),
+        style: ElevatedButton.styleFrom(
+          fixedSize: Size(width, height),
+          backgroundColor: backgroundColor ?? AppColors.greenPrimary
+        ),
+        child:  labelButton
     );
   }
 }

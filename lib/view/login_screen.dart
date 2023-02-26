@@ -20,8 +20,9 @@ class LoginScreen extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              AppColors.blueSecondary,
-              AppColors.greenPrimary]
+              AppColors.bluePrimary,
+              AppColors.greenPrimary
+            ]
           ),
         ),
         child: SafeArea(
@@ -63,7 +64,7 @@ class LoginScreen extends StatelessWidget {
                     )
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 274.h),
+                  margin: EdgeInsets.only(top: 250.h),
                   padding: EdgeInsets.symmetric(horizontal: 34.w),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
