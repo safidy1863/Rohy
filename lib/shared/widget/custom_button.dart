@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rohy/shared/colors/app_colors.dart';
 
 class CustomButton extends StatelessWidget {
 
@@ -24,7 +25,7 @@ class CustomButton extends StatelessWidget {
             onPressed: () => print("Login redirection"),
             style: ElevatedButton.styleFrom(
               fixedSize: Size(width, height),
-              backgroundColor: backgroundColor ?? Colors.green
+              backgroundColor: backgroundColor ?? AppColors.greenPrimary
             ),
             child:  labelButton
         )
