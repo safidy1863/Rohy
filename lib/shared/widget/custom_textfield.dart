@@ -34,6 +34,7 @@ class CustomTextField extends StatelessWidget{
             borderSide: BorderSide.none,
             borderRadius: BorderRadius.circular(6.0)
           ),
+          contentPadding: const EdgeInsets.symmetric(horizontal: 10),
           filled: true,
           fillColor: AppColors.blueThirdly.withOpacity(0.5),
           suffixIcon: textInputType == TextInputType.visiblePassword

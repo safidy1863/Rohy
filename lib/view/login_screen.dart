@@ -20,8 +20,9 @@ class LoginScreen extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              AppColors.blueSecondary,
-              AppColors.greenPrimary]
+              AppColors.bluePrimary,
+              AppColors.greenPrimary
+            ]
           ),
         ),
         child: SafeArea(
