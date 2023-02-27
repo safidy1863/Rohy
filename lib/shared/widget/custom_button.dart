@@ -8,20 +8,21 @@ class CustomButton extends StatelessWidget {
   final double width;
   final double height;
   final Color? backgroundColor;
+  final Function()? onTap;
 
   const CustomButton({
     super.key,
     required this.labelButton,
     this.height = 40,
     this.width = double.infinity,
-    this.backgroundColor
+    this.backgroundColor,
+    this.onTap
   });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      // TODO : change Redirection in home page
-        onPressed: () => print("Login redirection"),
+        onPressed: onTap,
         style: ElevatedButton.styleFrom(
           fixedSize: Size(width, height),
           backgroundColor: backgroundColor ?? AppColors.greenPrimary
