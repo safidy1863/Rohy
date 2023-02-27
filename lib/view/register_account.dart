@@ -22,7 +22,7 @@ class RegisterAccount extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              AppColors.greenPrimary,
+              AppColors.greenSecondary,
               AppColors.bluePrimary
             ]
           )
@@ -128,7 +128,7 @@ class RegisterAccount extends StatelessWidget {
               Text(
                 'VOUS AVEZ DEJA UN COMPTE? ',
                 style: TextStyle(
-                  color: AppColors.greenSecondary,
+                  color: AppColors.greenThirdly,
                   fontSize: 12.sp
                 ),
               ),

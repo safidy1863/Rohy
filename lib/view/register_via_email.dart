@@ -23,7 +23,7 @@ class RegisterViaEmail extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              AppColors.greenPrimary,
+              AppColors.greenSecondary,
               AppColors.bluePrimary
             ]
           )
@@ -39,7 +39,7 @@ class RegisterViaEmail extends StatelessWidget {
                     Text(
                       'VOUS AVEZ DEJA UN COMPTE?',
                       style: TextStyle(
-                        color: AppColors.greenSecondary,
+                        color: AppColors.greenThirdly,
                         fontSize: 12.sp
                       ),
                     ),
@@ -152,7 +152,7 @@ class RegisterViaEmail extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20.h,),
-          Divider(color: AppColors.greenSecondary,),
+          Divider(color: AppColors.greenThirdly,),
           SizedBox(height: 20.h,),
           const Text(
             'Ou continuer avec',
