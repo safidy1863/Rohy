@@ -27,7 +27,7 @@ class CustomButton extends StatelessWidget {
           fixedSize: Size(width, height),
           backgroundColor: backgroundColor ?? AppColors.greenSecondary
         ),
-        child:  labelButton
+        child: labelButton
     );
   }
 }

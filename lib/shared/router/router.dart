@@ -8,7 +8,7 @@ import 'package:rohy/view/register_via_email.dart';
 class AppRouter {
 
   static GoRouter configurations = GoRouter(
-    initialLocation: RoutePath.registerViaEmailPath,
+    initialLocation: RoutePath.getStartedPath,
     routes: [
       GoRoute(
         path: RoutePath.getStartedPath,
