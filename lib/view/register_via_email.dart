@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
+import 'package:go_router/go_router.dart';
 import 'package:rohy/shared/colors/app_colors.dart';
+import 'package:rohy/shared/models/route_path.dart';
 import 'package:rohy/shared/widget/custom_button.dart';
 import 'package:rohy/shared/widget/custom_textfield.dart';
 
@@ -108,7 +110,7 @@ class RegisterViaEmail extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 30.h,),
-                    Expanded(child: _buildForm())
+                    Expanded(child: _buildForm(context))
                   ],
                 ),
               ),
@@ -132,7 +134,7 @@ class RegisterViaEmail extends StatelessWidget {
     );
   }
 
-  Widget _buildForm() {
+  Widget _buildForm(BuildContext context) {
     return Form(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -144,8 +146,9 @@ class RegisterViaEmail extends StatelessWidget {
           SizedBox(height: 30.h,),
           Container(
             width: double.infinity,
-            child: const CustomButton(
+            child: CustomButton(
               labelButton: Text('CONTINUER'),
+              onTap: () => context.push(RoutePath.registerAccount),
             ),
           ),
           SizedBox(height: 20.h,),

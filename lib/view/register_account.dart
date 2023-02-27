@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:rohy/shared/colors/app_colors.dart';
+import 'package:rohy/shared/models/route_path.dart';
 import 'package:rohy/shared/widget/custom_button.dart';
 import 'package:rohy/shared/widget/custom_textfield.dart';
 
@@ -34,7 +36,7 @@ class RegisterAccount extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     ElevatedButton(
-                      onPressed: () => {},
+                      onPressed: () => context.pop(),
                       style: ElevatedButton.styleFrom(
                         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         minimumSize: Size.zero,
@@ -61,7 +63,6 @@ class RegisterAccount extends StatelessWidget {
               ),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 35.sp),
-
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -87,7 +88,7 @@ class RegisterAccount extends StatelessWidget {
                       ]
                     ),
                     SizedBox(height: 20.h,),
-                    _buildForm()
+                    _buildForm(context)
                   ],
                 ),
               )
@@ -98,7 +99,7 @@ class RegisterAccount extends StatelessWidget {
     );
   }
 
-  Widget _buildForm() {
+  Widget _buildForm(BuildContext context) {
     return Form(
       child: Column(
         children:  [
@@ -132,7 +133,7 @@ class RegisterAccount extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed: () => {},
+                onPressed: () => context.go(RoutePath.loginPath),
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
                   minimumSize: Size.zero,
