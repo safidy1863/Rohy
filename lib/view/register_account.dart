@@ -108,6 +108,14 @@ class RegisterAccount extends StatelessWidget {
           ),
           SizedBox(height: 20.h,),
           const CustomTextField(
+            hintText: 'Niveau',
+          ),
+          SizedBox(height: 20.h,),
+          const CustomTextField(
+            hintText: 'Parcours',
+          ),
+          SizedBox(height: 20.h,),
+          const CustomTextField(
             hintText: 'Votre mot de passe',
           ),
           SizedBox(height: 20.h,),
@@ -115,10 +123,11 @@ class RegisterAccount extends StatelessWidget {
             hintText: 'Confirmez votre mot de passe',
           ),
           SizedBox(height: 20.h,),
-          const SizedBox(
+          SizedBox(
             width: double.infinity,
             child: CustomButton(
               labelButton: Text('CREER UN COMPTE'),
+              onTap: () => {},
             ),
           ),
           SizedBox(height: 20.h,),
