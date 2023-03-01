@@ -14,16 +14,17 @@ dependencies:
   go_router: ^6.0.9
   simple_shadow: ^0.3.1
   blur: ^3.1.0
-  intl: ^0.17.0
+  intl: ^0.18.0
   flutter_screenutil: ^5.6.1
-  webview_flutter: ^2.0.13
+  webview_flutter: ^4.0.5
   bloc: ^8.0.2
-  firebase_core:
+  firebase_core: ^2.7.0
   firebase_auth:
   equatable:
   flutter_bloc:
   google_sign_in:
   email_validator:
+  curved_navigation_bar: ^1.0.3
 
 
   cupertino_icons: ^1.0.2
