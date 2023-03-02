@@ -1,10 +1,10 @@
 import 'package:go_router/go_router.dart';
 import 'package:rohy/shared/models/route_path.dart';
-import 'package:rohy/view/edt_screen.dart';
-import 'package:rohy/view/get_started_screen.dart';
-import 'package:rohy/view/login_screen.dart';
-import 'package:rohy/view/register_account_screen.dart';
-import 'package:rohy/view/register_via_email_screen.dart';
+import 'package:rohy/edt/view/edt_screen.dart';
+import 'package:rohy/get_started/view/get_started_screen.dart';
+import 'package:rohy/login/view/login_screen.dart';
+import 'package:rohy/register_account/view/register_account_screen.dart';
+import 'package:rohy/register_via_email/view/register_via_email_screen.dart';
 
 class AppRouter {
 

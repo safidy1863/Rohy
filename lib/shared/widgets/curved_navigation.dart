@@ -10,6 +10,7 @@ class CurvedNavigation extends StatelessWidget {
     return CurvedNavigationBar(
       backgroundColor: Colors.white,
       color: AppColors.bluePrimary,
+      height: 60,
       items: const [
         Icon(
           Icons.file_copy,

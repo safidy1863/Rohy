@@ -6,8 +6,16 @@ class EdtScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      bottomNavigationBar: CurvedNavigation(),
+    return  Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+
+      drawer: Container(
+        color: Colors.white,
+      ),
+      bottomNavigationBar: const CurvedNavigation(),
     );
   }
 }
