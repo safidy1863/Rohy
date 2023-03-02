@@ -5,9 +5,9 @@ import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:rohy/shared/colors/app_colors.dart';
 import 'package:rohy/shared/widget/custom_button.dart';
 
-class GetStarted extends StatelessWidget {
+class GetStartedScreen extends StatelessWidget {
 
-  const GetStarted({super.key});
+  const GetStartedScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

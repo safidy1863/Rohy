@@ -7,9 +7,9 @@ import 'package:rohy/shared/models/route_path.dart';
 import 'package:rohy/shared/widget/custom_button.dart';
 import 'package:rohy/shared/widget/custom_textfield.dart';
 
-class RegisterViaEmail extends StatelessWidget {
+class RegisterViaEmailScreen extends StatelessWidget {
 
-  const RegisterViaEmail({super.key});
+  const RegisterViaEmailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -148,7 +148,7 @@ class RegisterViaEmail extends StatelessWidget {
             width: double.infinity,
             child: CustomButton(
               labelButton: Text('CONTINUER'),
-              onTap: () => context.push(RoutePath.registerAccount),
+              onTap: () => context.push(RoutePath.registerAccountScreenPath),
             ),
           ),
           SizedBox(height: 20.h,),

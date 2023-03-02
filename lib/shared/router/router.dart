@@ -1,31 +1,36 @@
 import 'package:go_router/go_router.dart';
 import 'package:rohy/shared/models/route_path.dart';
-import 'package:rohy/view/get_started.dart';
+import 'package:rohy/view/edt_screen.dart';
+import 'package:rohy/view/get_started_screen.dart';
 import 'package:rohy/view/login_screen.dart';
-import 'package:rohy/view/register_account.dart';
-import 'package:rohy/view/register_via_email.dart';
+import 'package:rohy/view/register_account_screen.dart';
+import 'package:rohy/view/register_via_email_screen.dart';
 
 class AppRouter {
 
   static GoRouter configurations = GoRouter(
-    initialLocation: RoutePath.registerAccount,
+    initialLocation: RoutePath.edtScreenPath,
     routes: [
       GoRoute(
-        path: RoutePath.getStartedPath,
-        builder: (context,state) => const GetStarted(),
+        path: RoutePath.getStartedScreenPath,
+        builder: (context,state) => const GetStartedScreen(),
       ),
       GoRoute(
-        path: RoutePath.loginPath,
+        path: RoutePath.loginScreenPath,
         builder: (context,state) => const LoginScreen(),
       ),
       GoRoute(
-        path: RoutePath.registerViaEmailPath,
-        builder: (context,state) => const RegisterViaEmail(),
+        path: RoutePath.registerViaEmailScreenPath,
+        builder: (context,state) => const RegisterViaEmailScreen(),
       ),
       GoRoute(
-        path: RoutePath.registerAccount,
-        builder: (context,state) => const RegisterAccount()
+        path: RoutePath.registerAccountScreenPath,
+        builder: (context,state) => const RegisterAccountScreen()
       ),
+      GoRoute(
+        path: RoutePath.edtScreenPath,
+        builder: (context,state) => const EdtScreen()
+      )
     ]
   );
 }

@@ -6,9 +6,9 @@ import 'package:rohy/shared/models/route_path.dart';
 import 'package:rohy/shared/widget/custom_button.dart';
 import 'package:rohy/shared/widget/custom_textfield.dart';
 
-class RegisterAccount extends StatelessWidget {
+class RegisterAccountScreen extends StatelessWidget {
 
-  const RegisterAccount({super.key});
+  const RegisterAccountScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -142,7 +142,7 @@ class RegisterAccount extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed: () => context.go(RoutePath.loginPath),
+                onPressed: () => context.go(RoutePath.loginScreenPath),
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
                   minimumSize: Size.zero,

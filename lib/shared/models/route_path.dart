@@ -1,6 +1,8 @@
 class RoutePath {
-  static String getStartedPath = '/';
-  static String loginPath = "/login";
-  static String registerViaEmailPath = '/register_email';
-  static String registerAccount = '/register_account';
+  static String getStartedScreenPath = '/';
+  static String loginScreenPath = "/login_screen";
+  static String registerViaEmailScreenPath = '/register_email_screen';
+  static String registerAccountScreenPath = '/register_account_screen';
+
+  static String edtScreenPath = '/edt_screen';
 }
