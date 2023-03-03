@@ -7,9 +7,9 @@ import 'package:rohy/shared/models/route_path.dart';
 import 'package:rohy/shared/widget/custom_button.dart';
 import 'package:rohy/shared/widget/custom_textfield.dart';
 
-class RegisterViaEmail extends StatelessWidget {
+class RegisterViaEmailScreen extends StatelessWidget {
 
-  const RegisterViaEmail({super.key});
+  const RegisterViaEmailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class RegisterViaEmail extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              AppColors.greenPrimary,
+              AppColors.greenSecondary,
               AppColors.bluePrimary
             ]
           )
@@ -39,7 +39,7 @@ class RegisterViaEmail extends StatelessWidget {
                     Text(
                       'VOUS AVEZ DEJA UN COMPTE?',
                       style: TextStyle(
-                        color: AppColors.greenSecondary,
+                        color: AppColors.greenThirdly,
                         fontSize: 12.sp
                       ),
                     ),
@@ -148,11 +148,11 @@ class RegisterViaEmail extends StatelessWidget {
             width: double.infinity,
             child: CustomButton(
               labelButton: Text('CONTINUER'),
-              onTap: () => context.push(RoutePath.registerAccount),
+              onTap: () => context.push(RoutePath.registerAccountScreenPath),
             ),
           ),
           SizedBox(height: 20.h,),
-          Divider(color: AppColors.greenSecondary,),
+          Divider(color: AppColors.greenThirdly,),
           SizedBox(height: 20.h,),
           const Text(
             'Ou continuer avec',

@@ -21,7 +21,7 @@ class LoginScreen extends StatelessWidget {
             end: Alignment.bottomRight,
             colors: [
               AppColors.bluePrimary,
-              AppColors.greenPrimary
+              AppColors.greenSecondary
             ]
           ),
         ),
@@ -36,7 +36,7 @@ class LoginScreen extends StatelessWidget {
                       Text(
                         'VOUS N\'AVEZ PAS UN COMPTE?',
                         style: TextStyle(
-                            color: AppColors.greenSecondary,
+                            color: AppColors.greenThirdly,
                             fontSize: 12.sp
                         ),
                       ),

@@ -6,9 +6,9 @@ import 'package:rohy/shared/models/route_path.dart';
 import 'package:rohy/shared/widget/custom_button.dart';
 import 'package:rohy/shared/widget/custom_textfield.dart';
 
-class RegisterAccount extends StatelessWidget {
+class RegisterAccountScreen extends StatelessWidget {
 
-  const RegisterAccount({super.key});
+  const RegisterAccountScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class RegisterAccount extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              AppColors.greenPrimary,
+              AppColors.greenSecondary,
               AppColors.bluePrimary
             ]
           )
@@ -108,6 +108,14 @@ class RegisterAccount extends StatelessWidget {
           ),
           SizedBox(height: 20.h,),
           const CustomTextField(
+            hintText: 'Niveau',
+          ),
+          SizedBox(height: 20.h,),
+          const CustomTextField(
+            hintText: 'Parcours',
+          ),
+          SizedBox(height: 20.h,),
+          const CustomTextField(
             hintText: 'Votre mot de passe',
           ),
           SizedBox(height: 20.h,),
@@ -115,10 +123,11 @@ class RegisterAccount extends StatelessWidget {
             hintText: 'Confirmez votre mot de passe',
           ),
           SizedBox(height: 20.h,),
-          const SizedBox(
+          SizedBox(
             width: double.infinity,
             child: CustomButton(
               labelButton: Text('CREER UN COMPTE'),
+              onTap: () => {},
             ),
           ),
           SizedBox(height: 20.h,),
@@ -128,12 +137,12 @@ class RegisterAccount extends StatelessWidget {
               Text(
                 'VOUS AVEZ DEJA UN COMPTE? ',
                 style: TextStyle(
-                  color: AppColors.greenSecondary,
+                  color: AppColors.greenThirdly,
                   fontSize: 12.sp
                 ),
               ),
               TextButton(
-                onPressed: () => context.go(RoutePath.loginPath),
+                onPressed: () => context.go(RoutePath.loginScreenPath),
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
                   minimumSize: Size.zero,
